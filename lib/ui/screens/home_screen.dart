@@ -17,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<Category> categories = List<Category>();
   List<Article> articles = List<Article>();
+  List<Article> filteredArticles = List<Article>();
   bool _isLoading;
 
   @override
@@ -33,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     articles = news.news;
     setState(() {
       _isLoading = false;
+      filteredArticles = articles;
     });
   }
 
@@ -48,6 +50,39 @@ class _HomeScreenState extends State<HomeScreen> {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 20, horizontal: 12),
+                      child: TextField(
+                        onChanged: (article) {
+                          setState(() {
+                            filteredArticles = articles
+                                .where(
+                                  (element) =>
+                                      element.title.toLowerCase().contains(
+                                            article.toLowerCase(),
+                                          ),
+                                )
+                                .toList();
+                          });
+                        },
+                        decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.black,
+                            ),
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: Colors.black,
+                          ),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32),
+                              borderSide: BorderSide(color: Colors.black)),
+                        ),
+                      ),
+                    ),
                     Container(
                       height: 100,
                       child: ListView.builder(
@@ -69,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: ListView.builder(
                           shrinkWrap: true,
                           physics: ClampingScrollPhysics(),
-                          itemCount: articles.length,
+                          itemCount: filteredArticles.length,
                           itemBuilder: (context, i) {
                             return Padding(
                               padding: const EdgeInsets.all(12),
@@ -77,15 +112,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                 onTap: () => Navigator.of(context).push(
                                   MaterialPageRoute(
                                     builder: (context) => ArticleScreen(
-                                      article: articles[i],
+                                      article: filteredArticles[i],
                                     ),
                                   ),
                                 ),
                                 child: NewsTile(
-                                  imgUrl: articles[i].imgUrl ?? "",
-                                  title: articles[i].title ?? "",
+                                  imgUrl: filteredArticles[i].imgUrl ?? "",
+                                  title: filteredArticles[i].title ?? "",
                                   description:
-                                      articles[i].description ?? "",
+                                      filteredArticles[i].description ?? "",
                                 ),
                               ),
                             );
