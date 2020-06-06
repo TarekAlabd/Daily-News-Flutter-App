@@ -14,7 +14,7 @@ It's a simple app with beautiful UI to show daily news in different categories!
 * [x] Web View
 * [x] Detials Page
 
-## Start it!
+## Star it!
 Please :star: this repo to help us improve the quality.
 
 ## Preview 🎥 
