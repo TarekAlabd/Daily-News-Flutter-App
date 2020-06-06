@@ -21,13 +21,17 @@ Please :star: this repo to help us improve the quality.
 ![Daily News App - previewGif](assets/images/preview.gif) |
 
 ## Screenshots
-Home Page
+* Home Page
+
 ![screenshoot](assets/images/NewsAppHome.jpg)
-Categories Pages
+* Categories Pages
+
 ![screenshoot](assets/images/NewsAppCategories.jpg)
-Search And Details
+* Search And Details
+
 ![screenshoot](assets/images/NewsAppSearchAndDetails.jpg)
-Full Details
+* Full Details
+
 ![screenshoot](assets/images/NewsAppFullDetails.jpg)
 
 ## Language & Framework
