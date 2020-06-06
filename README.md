@@ -10,7 +10,7 @@ It's a simple app with beautiful UI to show daily news in different categories!
 * [x] Cross Platform App (Android - IOS - Web)
 * [x] Search Method
 * [x] Different Categories
-* [x] Image Chaching
+* [x] Image Caching
 * [x] Web View
 * [x] Detials Page
 
