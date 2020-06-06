@@ -20,6 +20,20 @@ Please :star: this repo to help us improve the quality.
 ## Preview 🎥 
 ![Daily News App - previewGif](assets/images/preview.gif) |
 
+## Screenshots
+Home Page
+![screenshoot](assets/images/NewsAppHome.jpg)
+Categories Pages
+![screenshoot](assets/images/NewsAppCategories.jpg)
+Search And Details
+![screenshoot](assets/images/NewsAppSearchAndDetails.jpg)
+Full Details
+![screenshoot](assets/images/NewsAppFullDetails.jpg)
+
+## Language & Framework
+* Dart
+* Flutter
+
 ## Contribtuing 💡
 1. Download the repository files (project) from the download section or clone this project by typing in the bash the following command:
 
