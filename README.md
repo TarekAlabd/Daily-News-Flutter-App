@@ -15,6 +15,7 @@ It's a simple app with beautiful UI to show daily news in different categories!
 * [x] Detials Page
 * [ ] Menu Drawer
 * [ ] Pinned Articles
+* [ ] Cashing Memory for news
 
 ## Star it!
 Please :star: this repo to help us improve the quality.
