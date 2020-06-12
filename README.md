@@ -13,7 +13,7 @@ It's a simple app with beautiful UI to show daily news in different categories!
 * [x] Image Caching
 * [x] Web View
 * [x] Detials Page
-* [ ] Mednu Drawer
+* [ ] Menu Drawer
 
 
 ## Star it!
